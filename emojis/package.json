@@ -1,0 +1,22 @@
+{
+  "name": "zonline-emojis",
+  "version": "1.0.0",
+  "description": "Emojis for Zonline",
+  "main": "./build.js",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://i.ssss.fun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/womade"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "中國遠徵",
+    "email": "admin@ssss.fun",
+    "url": "https://i.ssss.fun"
+  },
+  "jsdelivr": "info.json"
+}
