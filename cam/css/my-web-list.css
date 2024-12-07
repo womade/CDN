@@ -1,5 +1,5 @@
 @import url("my-web-reset.css");
-@import url("common/_ex.css");
+@import url("common/ex.css");
 @import url("my-web-header.css");
 @import url("my-web-footer.css");
 @import url("my-web-pagination.css");

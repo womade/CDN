@@ -558,7 +558,7 @@ JDOC.on( 'click', 'a.js_channel_manage', function( _evt ){
                     }
                 
                 $.ajax({
-                    url: isV2?'https://api.ssss.fun/cam/playV2.php':'/app/play',
+                    url: isV2?'https://api.ssss.fun/cam/playV2.php':'https://api.ssss.fun/cam/play.php',
                     data: {
                         taskid:$.now(),
                         from:'mpc_ipcam_web',

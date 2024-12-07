@@ -54,11 +54,6 @@
      * | <a href='http://jc2.openjavascript.org/docs_api/classes/JC.common.html' target='_blank'>API docs</a>
      * | <a href='../../modules/JC.common/0.3/_demo/' target='_blank'>demo link</a></p>
      * @class JC.common
-     * @static
-     * @version dev 0.3 2014-12-09
-     * @version dev 0.2 2013-11-06 
-     * @version dev 0.1 2013-07-04
-     * @author  qiushaowei   <suches@btbtd.org> | 360 75 Team
      */
     JC.common = JC.f = {
         "addUrlParams": addUrlParams
