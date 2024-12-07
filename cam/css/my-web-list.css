@@ -183,7 +183,6 @@ body {
 /* 设备列表 sta */
 .ipc-list{
     padding: 10px 0;
-    margin: 5px;
 }
 .ipc-list li{
     float: left;
@@ -198,8 +197,7 @@ body {
 }
 /* 4宫格模式重置宽高 */
 .mod-4 li{
-    width: 100%; 
-    padding: 5px 0;
+    width: 1190px;
 }
 .mod-4 li .pic-box,
 .mod-4 li .pic-box img{
