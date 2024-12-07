@@ -144,6 +144,10 @@
 }
 /* 导航栏 end */
 
+body {
+    background-image: url(../img/bg.png);
+    background-attachment: fixed;
+}
 
 .loading{ line-height: 200px; text-align: center; color: #aaa;}
 /* 没有匹配的目标结果 sta */
@@ -162,9 +166,18 @@
 
 /*设备列表提示*/
 .tip{
-    font-size:16px;
+    font-size: 16px;
     text-align: center;
-    padding-top:20px;
+    padding: 20px 0;
+    background-color: #FFFA;
+    backdrop-filter: blur(18px);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 8px;
+    width: 1200px;
+    margin: 10px auto;
+    position: relative;
 }
 
 /* 设备列表 sta */
@@ -185,6 +198,7 @@
 /* 4宫格模式重置宽高 */
 .mod-4 li{
     width: 100%; 
+    padding: 5px 0;
 }
 .mod-4 li .pic-box,
 .mod-4 li .pic-box img{
