@@ -175,8 +175,8 @@ body {
     border-style: solid;
     border-color: #333;
     border-radius: 8px;
-    width: 1200px;
-    margin: 10px auto;
+    width: 1188px;
+    margin: 20px auto 10px;
     position: relative;
 }
 
@@ -185,7 +185,7 @@ body {
     padding: 10px 0;
 }
 .ipc-list li{
-    float: left; 
+    float: left;
     width: 390px; 
     padding: 5px;
 }
