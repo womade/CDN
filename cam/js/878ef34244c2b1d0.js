@@ -4757,7 +4757,7 @@
                   , A = t.yuvRenderDelay
                   , N = void 0 === A ? -.02 : A
                   , z = t.ffmpeg
-                  , W = void 0 === z ? "https://cdn.ssss.fun/js/libffmpeg.js" : z
+                  , W = void 0 === z ? "https://s4.ssl.qhres2.com/!feb3e5fa/libffmpeg.js" : z
                   , I = t.logLevel
                   , j = void 0 === I ? 1 : I
                   , U = t.sei
