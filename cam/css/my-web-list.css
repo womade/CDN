@@ -183,6 +183,7 @@ body {
 /* 设备列表 sta */
 .ipc-list{
     padding: 10px 0;
+    margin: 5px;
 }
 .ipc-list li{
     float: left;
