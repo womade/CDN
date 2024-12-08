@@ -14,7 +14,7 @@ function hasUsableSWF(){
 function getH264List(callback) {
     if (h264list.length > 0) return callback();
     $.ajax({
-        url: 'ipclistbycodeformat.json',
+        url: 'https://cdn.ssss.fun/cam/data/ipclistbycodeformat.json',
         // url: 'https://jia.360.cn/data/configdata/ipclistbycodeformat.json',
         dataType: 'jsonp',
         jsonpCallback: 'callback',
