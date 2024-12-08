@@ -171,9 +171,7 @@ body {
     padding: 20px 0;
     background-color: #FFFA;
     backdrop-filter: blur(18px);
-    border-width: 1px;
-    border-style: solid;
-    border-color: #333;
+    border: 1px solid #333;
     border-radius: 8px;
     width: 1188px;
     margin: 20px auto 10px;
@@ -212,8 +210,9 @@ body {
     position: absolute;
     right: 0; top: 0; left: 0; bottom: 0;
     background:url(../img/mylist/myplay.png) no-repeat 50% 50%;
-    background-color: rgba(0,0,0,0.4);
-    transition: background-color .3s ease;
+    background-color: #3330;
+    backdrop-filter: blur(8px);
+    border: 1px solid #333;
 }
 
 .ipc-list  .pic-box .btn-play:hover i{
@@ -286,7 +285,7 @@ body {
 
 .ipc-list  h4{
     background-color: #F3F3F3;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #333;
     font-size: 15px;
     line-height: 30px;
     padding: 0 5px;
