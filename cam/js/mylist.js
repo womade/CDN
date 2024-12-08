@@ -37,8 +37,8 @@ function debounce (fn, delay) {
     }
 }
 
-var DEBOUNCE_DELAY = 5 * 1000000000
-var Silence_TIME = 30 * 60 * 1000000000
+var DEBOUNCE_DELAY = 5 * 1000
+var Silence_TIME = 30 * 60 * 1000 * 1000000
 var AUTO_CLOSE = 60 * 1000
 function Silence () {
     this.delay = Silence_TIME
@@ -260,7 +260,7 @@ JDOC.on( 'click', 'a.js_channel_manage', function( _evt ){
                     var $form = $(this), sn = $form.data('sn');
                     /* 保存名称设置 */
                     $.ajax({
-                        url: '/app/modifyDeviceInfo',
+                        url: 'http://api.ssss.fun/cam/modifyDeviceInfo.php',
                         data: {
                             from:'mpc_ipcam_web',
                             sn: sn,
