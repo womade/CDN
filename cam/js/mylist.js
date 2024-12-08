@@ -14,7 +14,8 @@ function hasUsableSWF(){
 function getH264List(callback) {
     if (h264list.length > 0) return callback();
     $.ajax({
-        url: 'https://jia.360.cn/data/configdata/ipclistbycodeformat.json',
+        url: 'ipclistbycodeformat.json',
+        // url: 'https://jia.360.cn/data/configdata/ipclistbycodeformat.json',
         dataType: 'jsonp',
         jsonpCallback: 'callback',
         success: function(list) {
@@ -260,7 +261,7 @@ JDOC.on( 'click', 'a.js_channel_manage', function( _evt ){
                     var $form = $(this), sn = $form.data('sn');
                     /* 保存名称设置 */
                     $.ajax({
-                        url: 'http://api.ssss.fun/cam/modifyDeviceInfo.php',
+                        url: 'https://api.ssss.fun/cam/modifyDeviceInfo.php',
                         data: {
                             from:'mpc_ipcam_web',
                             sn: sn,
