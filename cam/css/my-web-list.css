@@ -171,6 +171,7 @@ body {
     padding: 20px 0;
     background-color: #FFFA;
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid #333;
     border-radius: 8px;
     width: 1188px;
@@ -215,6 +216,7 @@ body {
     transition: background-color .3s ease;
     background-color: #3330;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid #333;
     border-radius: 8px;
 }
