@@ -39,7 +39,7 @@ function debounce (fn, delay) {
 }
 
 var DEBOUNCE_DELAY = 5 * 1000
-var Silence_TIME = 30 * 60 * 1000 * 1000000
+var Silence_TIME = 60 * 60 * 1000 * 24 * 365
 var AUTO_CLOSE = 60 * 1000
 function Silence () {
     this.delay = Silence_TIME
