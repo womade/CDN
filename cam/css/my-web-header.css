@@ -1,0 +1,200 @@
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(48px);
+    -webkit-backdrop-filter: blur(48px);
+    border-radius: 0 0 8px 8px;
+}
+.header .wrap{ z-index: 9991;height: 62px;}
+
+.bd{ padding-top: 62px; padding-bottom: 120px; }
+
+/* IE8以下版本浏览器兼容警告 */
+.lt-ie8{display: none;}
+.ie8 .header{top:42px}
+.ie8 .bd{ padding-top: 104px; background-position: 50% 104px; }
+.ie8 .lt-ie8{ display: block; font-size: 14px; background-color:#F8EFB4;border-bottom:solid 1px #eed64d;height:42px;left:0;line-height:42px;position:fixed;right:0;text-align:center;top:0;z-index:10000}
+.ie8 .lt-ie8 a{background:#47b902;border-radius:2px;color:#fff;margin-left:6px;padding:7px 15px;text-decoration:none}
+
+
+.header .logo{ 
+    float:left; 
+    padding-top: 15px;
+}
+.header .logo .online-num{ 
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: #5F6D84;
+    color: #FFF;
+    font-size: 14px;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+/* 右侧外联及登录信息 */
+.header .psa{
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+
+.header .user-info,
+.header .user-info a{
+    color: #fff;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.header .user-info img{
+    border-radius: 50%;
+    height: 34px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.header .user-info .btn-buy{
+    display: inline-block;
+    background-color: #fff;
+    color: #2a2a2a;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    padding: 4px 20px;
+    border-radius: 30px;
+    margin: 0 0 0 12px;
+}
+
+/* 搜索框 sta */
+.header .search-box {
+    right: 50%;
+    margin-right: -133px;
+    background-color: #494956CC;
+    border-radius: 5px;
+    width: 266px;
+    height: 34px;
+}
+.header .search-box .btn {
+    position: absolute;
+    right: 0;
+    height: 34px;
+    width: 50px;
+    background:url(../img/mylist/icon-search.png) no-repeat 50% 50%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.header .search-box .kw {
+    position: absolute;
+    left: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 10px;
+    width: 210px;
+}
+.header .search-box .btn-clear{
+    display: none;
+    position: absolute;
+    right: 37px;
+    top: 5px;
+    width: 24px;
+    line-height: 22px;
+    padding: 0px 0 2px 0;
+    text-align: center;
+    color: #A3A3A3;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.header .search-box .btn-clear:hover{
+    color: #fefefe;
+    background-color: rgba(0, 0, 0, 0.17);
+}
+
+.search-box .history {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+    display: none;
+    position: absolute;
+    top: 35px;
+    width: 266px;
+    font-size:12px;
+}
+.search-box .history:empty{
+    display: none !important;
+}
+.search-box .history:not(:empty):before {
+    content: attr(data-title);
+    color: #2E54AA;
+    font-size: 14px;
+    background-color: #D9E6FF;
+    display: block;
+    padding: 3px 8px;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+}
+.search-box .history li:first-child{
+    border-radius: 2px 2px 0 0;
+}
+.search-box .history li:last-child{
+    border-radius: 0 0 2px 2px;
+}
+
+.search-box .history li {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.search-box .history li a {
+    display: block;
+    padding: 0 7px
+}
+.search-box .history li.on {
+    background-color: #f1f1f1;
+}
+.search-box .history li:hover {
+    background-color: #e5e5e5;
+}
+.search-box .history li a:hover{
+    color: #000;
+}
+.search-box .history li i {
+    background-color: #5A8DF8;
+    border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    font-style: normal;
+    line-height: 18px;
+    margin-right: 7px;
+    padding: 0 5px
+}
+
+.search-box .history li.new i{
+    background-color: #BABABA;
+}
+.search-box .history li a.psa{
+    top: 3px;
+    right: 3px;
+    line-height: 20px;
+    color: #707070;
+    border-radius: 3px;
+    font-size: 20px;
+    text-shadow: 0 0 0 #FFF;
+    opacity: .6;
+}
+.search-box .history li a.psa:hover{
+    opacity: 1;
+    color: #CC4B4B;
+    background-color: #FFF7F5;
+}
+.header .search-box .kw:-webkit-input-placeholder { color: #9797B9 }
+.header .search-box .kw::-webkit-input-placeholder { color: #9797B9 }
+.header .search-box .kw:-moz-placeholder { color: #9797B9 }
+.header .search-box .kw::-moz-placeholder { color: #9797B9 }
+.header .search-box .kw:-ms-input-placeholder { color: #9797B9 }
+/* 搜索框 end */
