@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if (lt IE 8) ]><html class="ie8"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html><!--<![endif]-->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="Keywords" content="云视界" />
+    <meta name="Description" content="云视界" />
+        <title>云视界</title>
+        <link rel="shortcut icon" href="https://s.ssss.fun/Z.ico">
+        <link rel="stylesheet" href="https://cdn.ssss.fun/cam/css/my-web-list.css">
+        <link rel="stylesheet" href="https://cdn.ssss.fun/cam/css/982aa279e2f73cf0.css">
+        <style>
+            .col-md-offset-4 {
+                margin-left: 33.33333333%;
+            }
+            .col-md-4 {
+                width: 33.33333333%;
+            }
+            body::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-wrap">
+
+    <div class="lt-ie8">
+        当前浏览器版本过低，请更新浏览器版本。
+    </div>
+
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+                <img src="img/mylogo.png" alt="中國遠徵" height="30px"> | <span class="online-num">中國遠徵</span>
+            </div>
+
+            <div class="psa search-box">
+                <form id="ipc_search">
+                    <button class="btn" type="submit"></button>
+                    <a href="##clear" class="btn-clear" title="一键清空搜索条件">×</a>
+                    <input type="text" class="kw" name="kw" autocomplete="off" placeholder="摄像机编号或名称">
+                </form>
+                <ul class="history" data-title="搜索记录："></ul>
+                <script id="tmpl_kws" type="text/jq-tmpl">
+                    {%each kwArr%}
+                        <li class="${curTxt==$value?' on':''}" data-kw="${$value}">
+                            <a href="###" class="_kw"><i>${$index+1}</i> ${$value}</a><a href="###" class="psa _kw_del" title="从历史记录中删除">×</a>
+                        </li>
+                    {%/each%}
+                </script>
+            </div>
+
+            <div class="psa user-info">
+                <a href="https://i.ssss.fun/" target="_blank">
+                    <img src="https://i.ssss.fun/HI.png">
+                    @羊咩咩</a> | <a href="https://pay.ssss.fun">赞助</a>
+            </div>
+        </div>
+    </div>
+
+            <div class="bd">
+
+                <div class="tip">
+                    <p>这个是提示内容区，还没有想好写什么。</p>
+                    <p>你可以通过右方链接赞助一下，戳链接：<a href="https://pay.ssss.fun/" style="color:#6090f5">https://pay.ssss.fun/</a></p>
+                </div>
+                <div id="ipcs_list_box" class="wrap">
+                    <p class="loading">⏳ 加载中，请稍候...</p>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="f-nav">
+                    <a href="https://msg.ssss.fun" target="_blank">意见反馈</a>
+                    <span class="line">|</span>
+                    <a href="https://blog.ssss.fun" target="_blank">我的博客</a>
+                    <span class="line">|</span>
+                    <a href="#" class="add-favorite" onclick='alert("请使用按键Ctrl+d，收藏“我的云视界”网页版");return false;'>加入收藏</a>
+                    <span class="line">|</span>
+                    <a href="https://pan.ssss.fun" target="_blank">客户端下载</a>
+                </div>
+                <div class="f-copyright">
+                    Copyright &copy; 1998 中國遠徵 All Rights Reserved.
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备 20063797 号</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="ipcs_data.js"></script>
+
+        <script src="https://cdn.ssss.fun/cam/js/jquery1.10.2_json.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/swfobject2.3.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/jquery.tmpl.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/common/api.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/common/V.Compitibility.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/common/JC.common.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/common/const.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/a16b94b86057e487.js"></script>
+        <script src="https://cdn.ssss.fun/cam/js/878ef34244c2b1d0.js"></script>
+
+        <script type="text/x-jquery-tmpl" id="tmpl_pagination">
+    {%js 
+        var url = $data.url || '#';
+        var firstPage = $.isNumeric($data.firstPage)?$data.firstPage:0;
+        var curPage = $.isNumeric($data.curPage)?$data.curPage:firstPage;
+        var totalNum = $data.totalNum || 0;
+        var pageRows = $data.pageRows || 8;
+        var rollPage = $data.rollPage || 10;
+
+        var totalPage =  Math.ceil(totalNum/pageRows);
+        var prevPage = curPage - 1;
+        var nextPage = curPage + 1;
+        var maxPage = totalPage + (firstPage==0?-1:0);
+
+        /* 计算分页零时变量 */
+        var now_cool_page = rollPage/2;
+        var now_cool_page_ceil = Math.ceil(rollPage/2);
+        var pageNumTextDiff = firstPage==0?1:0;
+    %}
+    <div class="page-box">
+        <div class="pagination">
+            {%if curPage > firstPage%}
+            <a href="${url}${firstPage}" data-page-num="${firstPage}"  class="home">首页</a>
+            <a href="${url}${prevPage}" data-page-num="${prevPage}"  class="prev"><i></i></a>
+            {%/if%}
+
+            {%if curPage > now_cool_page_ceil && maxPage > rollPage %}
+                <a href="${url}${firstPage}" data-page-num="${firstPage}">1...</a>
+            {%/if%}
+
+            {%for(var i=firstPage;i<=(maxPage>rollPage?rollPage:maxPage);i++)%}
+                {%js 
+                var pageNumI = 0;
+                if(maxPage < rollPage || curPage - now_cool_page <= 0){
+                    pageNumI = i;
+                }else if(curPage + now_cool_page - 1 > maxPage){
+                    pageNumI = maxPage - rollPage +i;
+                }else{
+                    pageNumI = curPage - now_cool_page_ceil +i;
+                }
+                %}
+                <a href="${url}${pageNumI}" data-page-num="${pageNumI}" class="{%if pageNumI == curPage%}current{%/if%}">${pageNumI+pageNumTextDiff}</a>
+            {%/for%}
+
+            {%if curPage < maxPage-now_cool_page_ceil && maxPage != pageNumI %}
+                <a href="${url}${maxPage}" data-page-num="${maxPage}">...${maxPage+pageNumTextDiff}</a>
+            {%/if%}
+
+            {%if curPage < maxPage%}
+                <a href="${url}${nextPage}" data-page-num="${nextPage}" class="next"><i></i></a>
+                <a href="${url}${maxPage}" data-page-num="${maxPage}" class="end">末页</a>
+            {%/if%}
+        </div>
+    </div>
+</script>
+        <script type="text/x-jquery-tmpl" id="tmpl_list_empty">
+            <div class="empty-err clearfix">
+                <img src="img/myno.png">
+                <p>
+                    {%js var errTxt = '目前您还没有摄像机哦，点击下方按钮前去选购。'%}
+                    {%if _app._kw%}
+                        没有“<em>${_app._kw}</em>”相关摄像机，换个关键词试试吧。
+                    {%else%}
+                        {%js errTxt = {
+                                'share': '没有别人分享给您的摄像机，先去<a href="###" data-cate="all">全部</a>类目看看吧。',
+                                'up': '没有置顶摄像机，先去<a href="###" data-cate="all">全部</a>类目进行置顶设置吧。'
+                            }[_cate_key]||errTxt
+                        %}
+                        {%html errTxt%}
+                    {%/if%}
+                    <a href="https://tao.ssss.fun" target="_blank" class="btn-sm">戳我立即购买摄像机</a>
+                </p>
+            </div>
+        </script>
+
+        <script type="text/x-jquery-tmpl" id="tmpl_list">
+            {%if totalNum==0%}
+                {%tmpl($data) $("#tmpl_list_empty")%}
+            {%else%}
+                <ul class="ipc-list mod-${pageRows} clearfix">
+                    {%each listData%}
+                    {%js 
+                        var sn = $value.sn,
+                            tit = $value.title || sn,
+                            isOffline = $value.state!=1,
+                            isPublic = $value['public']==1,
+                            isOwner = $value.role==0,
+                            videocode = $value.extend ? $value.extend.video_code : '';
+                    %}
+                    <li class="${isOffline?'offline':isPublic?'public':'_'}">
+                        <div class="pic-box"
+                          data-id="${$value._id}" 
+                          data-sn="${sn}"
+                          data-videocode="${videocode}"
+                          data-streamv2="${$value.support.stream_v2}" 
+                          data-type="${isOffline?3:isPublic?1:2}"
+                          data-poster="${$value.thumbnail}"
+                          data-_id="${$value._id}"
+                          data-model="${$value.model}"
+                          data-_up_date="${$value._up_date}"
+                          >
+                            <a href="###" class="btn-play">
+                                <img src="${$value.thumbnail}" alt="${tit}" onerror="load_def(this)">
+                                <i></i>
+                                <span class="status">${isOffline?'离线':isPublic?'直播中':'在线'}</span>
+                            </a>
+                            <div class="mv-box"></div>
+                        </div>
+                        <h4>
+                            <span class="more">
+                                <div class="m-info">
+                                    {%if isOwner%}
+                                        <p>我的摄像机</p>
+                                    {%else%}
+                                        <p>${$value.owner}分享给我的摄像机</p>
+                                    {%/if%}
+                                    {%if +$value.share>0%}<p>已分享给${$value.share}位家人</p>{%/if%}
+                                    <p>设备编号： ${sn}</p>
+                                    <p>设备名称： <span data-ipc-tit="${sn}">${$value.title||'-'}</span></p>
+                                    {%if $value.location%}
+                                        <p>地理位置： ${$value.location}</p>
+                                    {%/if%}
+                                    {%if $value.desc%}
+                                        <p>设备描述： ${$value.desc}</p>
+                                    {%/if%}
+                                </div>
+                            </span>
+                            <form class="tit-edit" data-sn="${sn}">
+                                <input placeholder="请输入名称" class="ipt-sm" type="text" name="ipcname" value="${tit}">
+                                <input type="submit" class="btn-sm" value="保存">
+                            </form>
+                            <div class="tit">
+                                <span data-ipc-tit="${sn}">${tit}</span>
+                                {%if isOwner%}<a href="###" class="btn-edit">编辑</a>{%/if%}
+                                <label class="btn-up" title="置顶设置调整后下次浏览生效"><input type="checkbox" class="ipt-up" ${$value._up_date?'checked':''} data-sn="${sn}">置顶</label>
+                            </div>
+                        </h4>
+                    </li>
+                    {%/each%}
+
+                </ul>
+                {%if totalNum>pageRows%}
+                    {%tmpl({ totalNum:totalNum, pageRows: pageRows, curPage:curPage, firstPage: 1 } ) $("#tmpl_pagination")%}
+                {%/if%}
+            {%/if%}
+        </script>
+        <script type="text/javascript" src="https://cdn.ssss.fun/cam/js/mylist.js"></script>
+        <script src="js/monitor.js" ></script>
+        <script type="text/javascript">window.monitor && monitor.setProject("云视界").getTrack().getClickAndKeydown()</script>    </body>
+</html>

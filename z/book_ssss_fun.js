@@ -1,0 +1,11 @@
+var httpRequest = new XMLHttpRequest();
+var title = document.title;
+var fromurl = document.referrer;
+var screen_width = window.screen.width;
+var screen_height = window.screen.height;
+var screen_colorDepth = window.screen.colorDepth;
+var url = window.location.href;
+var parm = "subject=" + "新访客通知" + "&a1=" + "通知内容：" + "&b1=" + "" + "&a2=" + "" + "&b2=" + "主人您好，有人正在访问" + title + "&a3=" + "<br>" + "&b3=" + "" + "&a4=" + "" + "&b4=" + "" + "&a5=" + "" + "&b5=" + "" + "&a6=" + "屏幕比例：" + "&b6=" + screen_width + "x" + screen_height + "&a7=" + "颜色深度：" + "&b7=" + screen_colorDepth + "-bit" + "&a8=" + "来源网站：" + "&b8=" + fromurl + "&a9=" + "访问链接：" + "&b9=" + url;
+httpRequest.open('POST', '//api.ssss.fun/push/post.php', true);
+httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+httpRequest.send(parm);

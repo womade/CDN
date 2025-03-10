@@ -1,0 +1,18 @@
+#wrapper { width:100%; margin:0 auto; }
+.open { list-style:none;margin:20px auto; width:100%;}
+.open li { display:inline; float:left; background-size:cover; margin:10px; }
+.open li a { display:block; width:48px; height:48px;position:relative; text-decoration:none; }
+.open li a strong { font-weight:normal; position:absolute; left:20px; top:-1px; color:#fff; padding:3px; z-index:9999; text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75); background-color:rgba(0, 0, 0, 0.7); -moz-border-radius:3px; -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); -webkit-border-radius:3px; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); border-radius:3px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+li.way01 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way01.png"); }
+li.way02 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way02.png"); }
+li.way03 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way03.png"); }
+li.way04 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way04.png"); }
+li.way05 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way05.png"); }
+li.way06 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way06.png"); }
+li.way07 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way07.png"); }
+li.way08 { background-image:url("https://cdn.ssss.fun/onedisk/open/icon/way08.png"); }
+#openwith:hover li { opacity:0.1; }
+#openwith li { -webkit-transition-property: opacity; -webkit-transition-duration: 600ms; -moz-transition-property: opacity; -moz-transition-duration: 600ms; }
+#openwith li a strong { opacity:0; -webkit-transition-property: opacity, top; -webkit-transition-duration: 300ms; -moz-transition-property: opacity, top; -moz-transition-duration: 300ms; }
+#openwith li:hover { opacity:1; }
+#openwith li:hover a strong { opacity:1; top:-30px; }
