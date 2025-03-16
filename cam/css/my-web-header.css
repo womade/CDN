@@ -3,8 +3,8 @@
     top: 0; left: 0; right: 0;
     z-index: 9999;
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(48px);
-    -webkit-backdrop-filter: blur(48px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 0 0 8px 8px;
 }
 .header .wrap{ z-index: 9991;height: 62px;}

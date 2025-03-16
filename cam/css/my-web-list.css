@@ -135,8 +135,8 @@ body {
     text-align: center;
     padding: 20px 0;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(36px);
-    -webkit-backdrop-filter: blur(36px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid #333;
     border-radius: 8px;
     width: 1188px;
