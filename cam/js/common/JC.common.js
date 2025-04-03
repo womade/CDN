@@ -2,7 +2,7 @@
     
     /* 设备封面图加载失败则切换为默认图 */
     window.load_def=function(imgEl){
-        var defImgUrl = 'img/mylist/default_preview.jpg';
+        var defImgUrl = 'https://cdn.ssss.fun/cam/img/mylist/default_preview.jpg';
         if(imgEl.src!=defImgUrl){
             imgEl.src=defImgUrl;
         }
