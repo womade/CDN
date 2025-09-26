@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    background: rgb(255 255 255 / 0%);
+    background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: 0 0 8px 8px;
@@ -189,7 +189,7 @@
     border-radius: 3px;
     font-size: 20px;
     text-shadow: 0 0 0 #FFF;
-    opacity: .1;
+    opacity: .6;
 }
 .search-box .history li a.psa:hover{
     opacity: 1;
