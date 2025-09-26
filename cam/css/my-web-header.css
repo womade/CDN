@@ -1,11 +1,14 @@
 .header{
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgb(255 255 255 / 0%);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: 0 0 8px 8px;
+    border-bottom: 1px solid #00000020;
 }
 .header .wrap{ z-index: 9991;height: 62px;}
 
@@ -23,10 +26,10 @@
     float:left; 
     padding-top: 15px;
 }
-.header .logo .online-num{ 
+.header .logo .online-num{
     display: inline-block;
     padding: 2px 10px;
-    background-color: #5F6D84;
+    background-color: #5F6D8450;
     color: #FFF;
     font-size: 14px;
     vertical-align: middle;
@@ -42,8 +45,9 @@
 
 .header .user-info,
 .header .user-info a{
-    color: #fff;
+    color: #333;
     font-size: 14px;
+    font-weight: 600;
     margin: 0 5px;
 }
 .header .user-info img{
@@ -67,7 +71,7 @@
 .header .search-box {
     right: 50%;
     margin-right: -133px;
-    background-color: #ffffff22;
+    background-color: #00000010;
     border-radius: 5px;
     width: 266px;
     height: 34px;
@@ -88,7 +92,7 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-    color: #fff;
+    color: #333;
     font-size: 14px;
     height: 34px;
     line-height: 34px;
@@ -114,13 +118,13 @@
 }
 
 .search-box .history {
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    border-radius: 6px;
     display: none;
     position: absolute;
     top: 35px;
-    width: 266px;
+    width: 264px;
     font-size:12px;
 }
 .search-box .history:empty{
@@ -185,16 +189,16 @@
     border-radius: 3px;
     font-size: 20px;
     text-shadow: 0 0 0 #FFF;
-    opacity: .6;
+    opacity: .1;
 }
 .search-box .history li a.psa:hover{
     opacity: 1;
     color: #CC4B4B;
     background-color: #FFF7F5;
 }
-.header .search-box .kw:-webkit-input-placeholder { color: #9797B9 }
-.header .search-box .kw::-webkit-input-placeholder { color: #9797B9 }
-.header .search-box .kw:-moz-placeholder { color: #9797B9 }
-.header .search-box .kw::-moz-placeholder { color: #9797B9 }
-.header .search-box .kw:-ms-input-placeholder { color: #9797B9 }
+.header .search-box .kw:-webkit-input-placeholder { color: #888 }
+.header .search-box .kw::-webkit-input-placeholder { color: #888 }
+.header .search-box .kw:-moz-placeholder { color: #888 }
+.header .search-box .kw::-moz-placeholder { color: #888 }
+.header .search-box .kw:-ms-input-placeholder { color: #888 }
 /* 搜索框 end */
