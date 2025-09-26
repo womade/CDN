@@ -4,11 +4,11 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.86);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: 0 0 8px 8px;
-    border-bottom: 1px solid #00000020;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 .header .wrap{ z-index: 9991;height: 62px;}
 
@@ -29,7 +29,7 @@
 .header .logo .online-num{
     display: inline-block;
     padding: 2px 10px;
-    background-color: #5F6D8450;
+    background-color: #333333ee;
     color: #FFF;
     font-size: 14px;
     vertical-align: middle;
@@ -68,6 +68,9 @@
 }
 
 /* 搜索框 sta */
+.header .search-box:hover {
+    background-color: #00000020;
+}
 .header .search-box {
     right: 50%;
     margin-right: -133px;
