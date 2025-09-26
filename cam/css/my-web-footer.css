@@ -7,11 +7,11 @@
   font-size: 14px;
   color: #888;
   min-width: 1200px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid rgba(247, 247, 247, 0.3);
   border-radius: 8px 8px 0 0;
   padding-top: 25px;
   padding-bottom: 20px;
-  background-color: rgba(247, 247, 247, 0.8);
+  background-color: rgba(247, 247, 247, 0);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transform: translateY(0);
