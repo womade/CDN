@@ -68,8 +68,8 @@
 }
 
 /* 搜索框 sta */
-.header .search-box:active {
-    background-color: #00000020;
+.header .search-box:hover {
+    background-color: #00000018;
 }
 .header .search-box {
     right: 50%;
@@ -83,8 +83,8 @@
     position: absolute;
     right: 0;
     height: 34px;
-    width: 50px;
-    background:url(../img/mylist/icon-search.png) no-repeat 50% 50%;
+    width: 46px;
+    background:url(../img/mylist/icon-search.svg) no-repeat 50% 50%;
     border: 0;
     outline: 0;
     cursor: pointer;
@@ -99,7 +99,7 @@
     font-size: 14px;
     height: 34px;
     line-height: 34px;
-    text-indent: 10px;
+    text-indent: 12px;
     width: 210px;
 }
 .header .search-box .btn-clear{
