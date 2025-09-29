@@ -27,6 +27,5 @@ body{font: 14px/1.5 "Helvetica Neue",Helvetica,"Microsoft Yahei",STHeiTi,sans-se
 html,body,.page-wrap{height: 100%;}
 .page-wrap{ display: block; position: relative; }
 .wrap {width: 1200px;margin: 0 auto;  position: relative;}
-/*.bd{ min-width: 1200px; }*/
 
 .err-msg{color: #777; text-align: center; line-height: 100px;}
