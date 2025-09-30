@@ -12,8 +12,8 @@
     border-bottom: 1px solid rgba(255,255,255,0.3);
     backdrop-filter: blur(16px) saturate(200%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
-    box-shadow:0 8px 32px rgba(0,0,0,0.15);
-    outline: 1px solid rgba(255,255,255,0.15);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    outline: 1px solid rgba(255,255,255,0.2);
     outline-offset: -1px;
 }
 .header .wrap{ z-index: 9991;height: 62px;}
