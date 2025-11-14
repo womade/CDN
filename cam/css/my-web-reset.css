@@ -20,11 +20,11 @@ a:hover{color:#3C88E4; text-decoration:none}
 .clearfix{clear:both;zoom:1}
 .clearfix:after{clear:both;content:'';display:block;height:0;visibility:hidden}
 
-body{font: 14px/1.5 "Helvetica Neue",Helvetica,"Microsoft Yahei",STHeiTi,sans-serif,Arial;min-height: 880px;min-width: 1200px;}
+body{font: 14px/1.5 "Helvetica Neue",Helvetica,"Microsoft Yahei",STHeiTi,sans-serif,Arial;min-height: 880px;}
 
 
 /* common set */
-html,body,.page-wrap{height: 100%;}
+html,body,.page-wrap{height: 100%; min-width: 1200px;}
 .page-wrap{ display: block; position: relative; }
 .wrap {width: 1200px;margin: 0 auto;  position: relative;}
 
