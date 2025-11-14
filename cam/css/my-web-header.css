@@ -17,7 +17,7 @@
 }
 .header .wrap{ z-index: 9991;height: 62px;}
 
-.bd{ padding-top: 62px; padding-bottom: 20px; }
+.bd{ padding-top: 62px; padding-bottom: 20px; min-height: calc(100vh - 203px);}
 
 /* IE8以下版本浏览器兼容警告 */
 .lt-ie8{display: none;}
